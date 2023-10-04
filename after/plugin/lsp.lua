@@ -1,12 +1,16 @@
 local lsp = require('lsp-zero').preset({})
 
+-- Show function signature when you type
+cfg = {}
+require('lsp_signature').setup(cfg)
+
 lsp.on_attach(function(client, bufnr)
     -- see :help lsp-zero-keybindings
     -- to learn the available actions
+
     lsp.default_keymaps({ buffer = bufnr })
 
     vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, { buffer = bufnr })
-
 
     lsp.buffer_autoformat()
 end)
