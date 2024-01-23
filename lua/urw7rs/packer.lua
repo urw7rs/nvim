@@ -21,11 +21,8 @@ return require('packer').startup(function(use)
     }
 
     use({
-        "ellisonleao/gruvbox.nvim",
-        as = 'gruvbox',
-        config = function()
-            vim.cmd('colorscheme gruvbox')
-        end
+        'rose-pine/neovim',
+        as = 'rose-pine',
     })
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -65,10 +62,6 @@ return require('packer').startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
 
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
     use 'AckslD/swenv.nvim'
 
     use { 'stevearc/dressing.nvim' }
