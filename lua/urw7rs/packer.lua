@@ -16,13 +16,13 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.x',
+        'nvim-telescope/telescope.nvim', tag = '0.1.7',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
     use({
         'rose-pine/neovim',
-        as = 'rose-pine',
+        as = 'rose-pine'
     })
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -33,7 +33,7 @@ return require('packer').startup(function(use)
 
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
+        branch = 'v4.x',
         requires = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' }, -- Required
@@ -65,6 +65,8 @@ return require('packer').startup(function(use)
     use 'AckslD/swenv.nvim'
 
     use { 'stevearc/dressing.nvim' }
+
+    use 'lervag/vimtex'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
