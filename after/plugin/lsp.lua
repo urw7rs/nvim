@@ -27,7 +27,7 @@ require('mason-lspconfig').setup({
         -- lua
         "lua_ls",
         -- python
-        "jedi_language_server", "pyright", "ruff_lsp"
+        "jedi_language_server", "pyright", "ruff"
     },
     handlers = {
         lsp_zero.default_setup,
@@ -55,7 +55,7 @@ lspconfig.pyright.setup({
     }
 })
 
-lspconfig.ruff_lsp.setup({
+lspconfig.ruff.setup({
     init_options = {
         settings = {
             -- Any extra CLI arguments for `ruff` go here.
